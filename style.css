@@ -1,0 +1,421 @@
+/* General body styles for overall layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column; /* Stacks the main wrapper and disclaimer vertically */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #2c3e50; /* Dark background */
+    color: #ecf0f1; /* Light text */
+    margin: 0;
+    padding: 10px; /* Overall padding for small screens */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+/* Main wrapper for both systems */
+.main-wrapper {
+    display: flex;
+    flex-direction: column; /* Stacks systems vertically on small screens */
+    gap: 20px; /* Space between the two systems */
+    width: 100%;
+    max-width: 900px; /* Max width for larger screens */
+    align-items: center; /* Center items horizontally within the wrapper */
+    margin-bottom: 20px; /* Space before disclaimer */
+}
+
+/* Common container styles for both apps */
+.container {
+    background-color: #34495e; /* Card background color */
+    padding: 20px; /* Adjusted padding for mobile */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%; /* Full width within the main-wrapper */
+    max-width: 500px; /* Max width for individual containers */
+}
+
+/* Gattahu System Specific Styles (from original style.css) */
+.gattahu-container h1 {
+    color: #e67e22; /* Orange accent */
+    margin-bottom: 20px; /* Adjusted margin */
+    font-size: 2em; /* Adjusted font size */
+}
+
+.gattahu-container .game-info p {
+    font-size: 1.1em; /* Adjusted font size */
+    margin: 8px 0; /* Adjusted margin */
+}
+
+.gattahu-container .game-info span {
+    font-weight: bold;
+}
+
+#currentBetUnit {
+    color: #e74c3c; /* Red */
+    font-size: 2.2em; /* Slightly adjusted for better fit */
+    font-weight: bold;
+}
+
+#currentStage {
+    color: #3498db; /* Blue */
+}
+
+#currentLevel, #totalUnits {
+    color: #f1c40f; /* Yellow */
+}
+
+
+.gattahu-container .message {
+    margin-top: 15px; /* Adjusted margin */
+    font-size: 1em; /* Adjusted font size */
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.gattahu-container .message.win {
+    color: #2ecc71;
+}
+
+.gattahu-container .message.lose {
+    color: #e74c3c;
+}
+
+
+.gattahu-container .controls {
+    margin-top: 20px; /* Adjusted margin */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Adjusted gap */
+}
+
+.gattahu-container .button {
+    padding: 10px 20px; /* Adjusted padding */
+    border: none;
+    border-radius: 5px;
+    font-size: 1em; /* Adjusted font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    flex: 1 1 45%; /* Responsive width for buttons */
+    min-width: 100px; /* Minimum width */
+}
+
+.gattahu-container .button.win {
+    background-color: #27ae60;
+    color: white;
+}
+
+.gattahu-container .button.win:hover {
+    background-color: #2ecc71;
+    transform: translateY(-2px);
+}
+
+.gattahu-container .button.lose {
+    background-color: #c0392b;
+    color: white;
+}
+
+.gattahu-container .button.lose:hover {
+    background-color: #e74c3c;
+    transform: translateY(-2px);
+}
+
+.gattahu-container .button.reset, .gattahu-container .button.undo {
+    background-color: #7f8c8d;
+    color: white;
+}
+
+.gattahu-container .button.reset:hover, .gattahu-container .button.undo:hover {
+    background-color: #95a5a6;
+    transform: translateY(-2px);
+}
+
+.gattahu-container .button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Baccarat Prophet System Specific Styles (converted from Tailwind) */
+.baccarat-container {
+    background: white; /* Changed background for contrast */
+    border-color: #dc2626; /* red-700 */
+    color: #1f2937; /* gray-900 */
+    padding: 24px; /* p-6 */
+    border-radius: 16px; /* rounded-2xl */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* shadow-2xl */
+}
+
+.baccarat-title {
+    font-size: 2.25rem; /* text-3xl sm:text-4xl */
+    font-weight: 800; /* font-extrabold */
+    margin-bottom: 24px; /* mb-6 */
+    color: #dc2626; /* text-red-700 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* gap-2 sm:gap-3 */
+}
+
+.baccarat-icon {
+    font-size: 3rem; /* text-4xl sm:text-5xl */
+}
+
+.baccarat-dice-display {
+    border: 1px solid #d1d5db; /* border border-gray-300 */
+    padding: 16px; /* p-4 */
+    border-radius: 8px; /* rounded-lg */
+    color: #374151; /* text-gray-700 */
+    background-color: #f9fafb; /* bg-gray-50 */
+    margin-bottom: 16px; /* mb-4 */
+    min-height: 3rem; /* min-h-[3rem] */
+    max-height: 6rem; /* max-h-[6rem] */
+    overflow-y: auto; /* overflow-y-auto */
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); /* shadow-inner */
+}
+
+.baccarat-dice-label {
+    font-size: 1rem; /* text-base */
+    font-weight: 500; /* font-medium */
+    color: #dc2626; /* text-red-600 */
+    margin-bottom: 4px; /* mb-1 */
+}
+
+.baccarat-dice-values {
+    font-size: 1rem; /* text-base */
+    word-break: break-all; /* break-all */
+    color: #374151; /* text-gray-700 */
+}
+
+.baccarat-controls {
+    margin-bottom: 24px; /* mb-6 */
+    display: flex;
+    justify-content: center;
+}
+
+.baccarat-button {
+    width: 100%; /* w-full */
+    padding: 12px 24px; /* px-4 py-2 sm:px-6 sm:py-3 */
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 700; /* font-bold */
+    border-radius: 12px; /* rounded-xl */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+    transition: all 0.3s ease; /* transition-all duration-300 */
+    transform: scale(1); /* initial transform for hover */
+    cursor: pointer;
+    border: none;
+}
+
+.baccarat-button:hover {
+    transform: scale(1.05); /* hover:scale-105 */
+}
+
+.baccarat-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.5); /* focus:ring-4 focus:ring-red-300 */
+}
+
+.baccarat-button:active {
+    background-color: #991b1b; /* active:bg-red-800 */
+}
+
+.baccarat-roll {
+    background-image: linear-gradient(to right, #dc2626, #991b1b); /* bg-gradient-to-r from-red-600 to-red-800 */
+    color: white;
+}
+
+.baccarat-result {
+    font-size: 3rem; /* text-5xl sm:text-6xl */
+    font-weight: 800; /* font-extrabold */
+    color: #1f2937; /* text-gray-900 */
+    margin-bottom: 24px; /* mb-6 */
+}
+
+.baccarat-result-icon {
+    font-size: 4.375rem; /* text-7xl sm:text-8xl */
+}
+
+.baccarat-counts-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* col-span-full */
+    gap: 12px; /* gap-3 */
+    margin-bottom: 24px; /* mb-6 */
+    color: #2d3748; /* text-gray-800 */
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .baccarat-counts-grid {
+        grid-template-columns: 1fr 1fr; /* sm:grid-cols-2 */
+    }
+    .baccarat-total-count {
+        grid-column: span 1 / span 1; /* sm:col-span-1 */
+    }
+    .baccarat-summary-counts {
+        grid-column: span 1 / span 1; /* sm:col-span-1 */
+    }
+}
+
+.baccarat-total-count,
+.baccarat-summary-counts {
+    padding: 12px; /* p-3 */
+    background-color: #eff6ff; /* bg-blue-100 for total, bg-gray-100 for summary */
+    border-radius: 8px; /* rounded-lg */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+}
+
+.baccarat-total-count {
+    background-color: #eff6ff; /* bg-blue-100 */
+}
+.baccarat-summary-counts {
+    background-color: #f9fafb; /* bg-gray-100 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.baccarat-label {
+    font-size: 1rem; /* text-base */
+    font-weight: 600; /* font-semibold */
+}
+
+.baccarat-value {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700; /* font-bold */
+    color: #1d4ed8; /* text-blue-700 */
+}
+
+.baccarat-summary-values {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 700; /* font-bold */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 16px; /* gap-x-4 gap-y-2 */
+}
+
+.baccarat-banker-count {
+    color: #166534; /* text-green-700 */
+}
+
+.baccarat-player-count {
+    color: #6d28d9; /* text-purple-700 */
+}
+
+.baccarat-tie-count {
+    color: #b45309; /* text-yellow-700 */
+}
+
+.baccarat-action-buttons {
+    margin-top: 24px; /* mt-6 */
+    display: flex;
+    flex-direction: column; /* flex-col */
+    gap: 12px; /* gap-3 sm:gap-4 */
+}
+
+@media (min-width: 640px) { /* sm breakpoint */
+    .baccarat-action-buttons {
+        flex-direction: row; /* sm:flex-row */
+    }
+}
+
+.baccarat-go-back {
+    border: 2px solid #2563eb; /* border-2 border-blue-600 */
+    color: #2563eb; /* text-blue-600 */
+    background-color: transparent;
+}
+
+.baccarat-go-back:disabled {
+    opacity: 0.5; /* opacity-50 */
+    cursor: not-allowed; /* cursor-not-allowed */
+}
+
+.baccarat-go-back:not(:disabled):hover {
+    background-color: #e0f2fe; /* hover:bg-blue-100 */
+}
+
+.baccarat-go-back:not(:disabled):focus {
+    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.5); /* focus:ring-4 focus:ring-blue-300 */
+}
+
+.baccarat-go-back:not(:disabled):active {
+    background-color: #bfdbfe; /* active:bg-blue-200 */
+}
+
+.baccarat-reset {
+    border: 2px solid #dc2626; /* border-2 border-red-600 */
+    color: #dc2626; /* text-red-600 */
+    background-color: transparent;
+}
+
+.baccarat-reset:hover {
+    background-color: #fee2e2; /* hover:bg-red-100 */
+}
+
+.baccarat-reset:focus {
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.5); /* focus:ring-4 focus:ring-red-300 */
+}
+
+.baccarat-reset:active {
+    background-color: #fecaca; /* active:bg-red-200 */
+}
+
+/* Disclaimer styles */
+.disclaimer {
+    color: #bdc3c7;
+    font-size: 0.75em; /* Adjusted for mobile */
+    text-align: center;
+    padding: 8px; /* Adjusted padding */
+    max-width: 500px;
+    margin-top: 15px; /* Adjusted margin */
+}
+
+/* Media query for larger screens (e.g., tablets and desktops) */
+@media (min-width: 768px) { /* md breakpoint for horizontal layout */
+    .main-wrapper {
+        flex-direction: row; /* Arranges systems side-by-side */
+        justify-content: center;
+        align-items: flex-start; /* Align items to the top */
+    }
+
+    .container {
+        padding: 30px; /* Restore original padding for larger screens */
+    }
+
+    .gattahu-container .game-info p {
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
+
+    #currentBetUnit {
+        font-size: 2.4em;
+    }
+
+    .gattahu-container .message {
+        margin-top: 20px;
+        font-size: 1.1em;
+    }
+
+    .gattahu-container .controls {
+        margin-top: 30px;
+        gap: 15px;
+    }
+
+    .gattahu-container .button {
+        padding: 12px 25px;
+        font-size: 1.1em;
+        flex: 1 1 auto; /* Revert to auto flex for larger screens */
+    }
+
+    .baccarat-title {
+        font-size: 2.5rem; /* For md screens */
+    }
+    .baccarat-icon {
+        font-size: 3.5rem; /* For md screens */
+    }
+    .baccarat-button {
+        width: auto; /* w-auto on larger screens */
+        padding: 12px 24px; /* sm:px-6 sm:py-3 */
+        font-size: 1.125rem; /* sm:text-lg */
+    }
+}
